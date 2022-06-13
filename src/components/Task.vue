@@ -3,8 +3,7 @@
 '', 'task']">
     <h3>
         {{task.text}}
-        <i @click="onDelete(task.id)" class="fas fa-times"></i>
-    </h3>
+        <i @click="$emit('delete-task', task.id)" class="fas fa-times"></i>    </h3>
     <p>{{task.day}}</p>
 </div>
 </template>
@@ -24,8 +23,8 @@
 </script>
 
 <style scope>
-.fas{
-    color: red;
+.fas {
+  color: red;
 }
 .task {
   background: #f4f4f4;
@@ -39,6 +38,6 @@
 .task h3 {
   display: flex;
   align-items: center;
-  justify-content: sp
+  justify-content: space-between;
 }
 </style>
